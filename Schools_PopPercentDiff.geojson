@@ -1,0 +1,455 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.3924668,
+          33.9625271
+        ]
+      },
+      "properties": {
+        "School": "Centerville Elementary",
+        "Address": "4147 Augusta Hwy, Gilbert, SC 29054",
+        "PopPercentDiff": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.2590798,
+          33.8952969
+        ]
+      },
+      "properties": {
+        "School": "Carolina Springs Elementary",
+        "Address": "6180 Platt Springs Rd, Lexington, SC 29073",
+        "PopPercentDiff": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.2863556,
+          33.9076151
+        ]
+      },
+      "properties": {
+        "School": "Deerfield Elementary",
+        "Address": "638 Longs Pond Rd, Lexington, SC 29073",
+        "PopPercentDiff": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.2407597,
+          33.7783468
+        ]
+      },
+      "properties": {
+        "School": "Forts Pond Elementary",
+        "Address": "7350 Fish Hatchery Rd, Pelion, SC 29123",
+        "PopPercentDiff": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.3938073,
+          33.9179938
+        ]
+      },
+      "properties": {
+        "School": "Gilbert Elementary",
+        "Address": "520 Main St, Gilbert, SC 29054",
+        "PopPercentDiff": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.2341153,
+          33.9875473
+        ]
+      },
+      "properties": {
+        "School": "Lexington Elementary",
+        "Address": "116 Azalea Dr, Lexington, SC 29072",
+        "PopPercentDiff": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.2901868,
+          33.9862647
+        ]
+      },
+      "properties": {
+        "School": "Lake Murray Elementary",
+        "Address": "205 Wise Ferry Rd, Lexington, SC 29072",
+        "PopPercentDiff": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.2161378,
+          34.025784
+        ]
+      },
+      "properties": {
+        "School": "Midway Elementary",
+        "Address": "180 Midway Rd, Lexington, SC 29072",
+        "PopPercentDiff": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.1670979,
+          34.0043075
+        ]
+      },
+      "properties": {
+        "School": "Meadow Glen Elementary",
+        "Address": "510 Ginny Ln, Lexington, SC 29072",
+        "PopPercentDiff": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.2671655,
+          34.0076211
+        ]
+      },
+      "properties": {
+        "School": "New Providence Elementary",
+        "Address": "1118 Old Cherokee Rd, Lexington, SC 29072",
+        "PopPercentDiff": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.1558427,
+          33.9842981
+        ]
+      },
+      "properties": {
+        "School": "Oak Grove Elementary",
+        "Address": "479 Oak Dr, Lexington, SC 29073",
+        "PopPercentDiff": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.2551185,
+          33.7523103
+        ]
+      },
+      "properties": {
+        "School": "Pelion Elementary",
+        "Address": "1202 Pine St, Pelion, SC 29123",
+        "PopPercentDiff": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.289249,
+          33.9594891
+        ]
+      },
+      "properties": {
+        "School": "Pleasant Hill Elementary",
+        "Address": "664 Rawl Rd, Lexington, SC 29072",
+        "PopPercentDiff": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.33617,
+          33.991069
+        ]
+      },
+      "properties": {
+        "School": "Rocky Creek Elementary",
+        "Address": "430 Calks Ferry Rd, Lexington, SC 29072",
+        "PopPercentDiff": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.2159295,
+          33.9151394
+        ]
+      },
+      "properties": {
+        "School": "Saxe Gotha Elementary",
+        "Address": "100 Bill Williamson Ct, Lexington, SC 29073",
+        "PopPercentDiff": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.2901868,
+          33.9862647
+        ]
+      },
+      "properties": {
+        "School": "South Lake Elementary",
+        "Address": "205 Wise Ferry Rd, Lexington, SC 29072",
+        "PopPercentDiff": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.1888864,
+          33.9424147
+        ]
+      },
+      "properties": {
+        "School": "White Knoll Elementary",
+        "Address": "132 White Knoll Way, West Columbia, SC 29170",
+        "PopPercentDiff": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.3331608,
+          34.0008709
+        ]
+      },
+      "properties": {
+        "School": "Beechwood Middle",
+        "Address": "1340 Highway #378, Lexington, SC 29072",
+        "PopPercentDiff": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.2590798,
+          33.8952969
+        ]
+      },
+      "properties": {
+        "School": "Carolina Springs Middle",
+        "Address": "6180 Platt Springs Rd, Lexington, SC 29073",
+        "PopPercentDiff": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.3925637,
+          33.9184846
+        ]
+      },
+      "properties": {
+        "School": "Gilbert Middle",
+        "Address": "120 Rikard Cir, Gilbert, SC 29054",
+        "PopPercentDiff": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.233735,
+          34.0052809
+        ]
+      },
+      "properties": {
+        "School": "Lakeside Middle",
+        "Address": "455 Old Cherokee Rd, Lexington, SC 29072",
+        "PopPercentDiff": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.1646631,
+          34.0052866
+        ]
+      },
+      "properties": {
+        "School": "Meadow Glen Middle",
+        "Address": "440 Ginny Ln, Lexington, SC 29072",
+        "PopPercentDiff": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.2890699,
+          33.9595499
+        ]
+      },
+      "properties": {
+        "School": "Pleasant Hill Middle",
+        "Address": "660 Rawl Rd, Lexington, SC 29072",
+        "PopPercentDiff": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.2533484,
+          33.7676442
+        ]
+      },
+      "properties": {
+        "School": "Pelion Middle",
+        "Address": "325 Main St, Pelion, SC 29123",
+        "PopPercentDiff": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.1902221,
+          33.9448167
+        ]
+      },
+      "properties": {
+        "School": "White Knoll Middle",
+        "Address": "116 White Knoll Way, West Columbia, SC 29170",
+        "PopPercentDiff": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.393035,
+          33.9117474
+        ]
+      },
+      "properties": {
+        "School": "Gilbert High",
+        "Address": "840 Main St, Gilbert, SC 29054",
+        "PopPercentDiff": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.3058549,
+          33.9770829
+        ]
+      },
+      "properties": {
+        "School": "Lexington High",
+        "Address": "2463 Augusta Hwy, Lexington, SC 29072",
+        "PopPercentDiff": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.2547275,
+          33.7642806
+        ]
+      },
+      "properties": {
+        "School": "Pelion High",
+        "Address": "600 Lydia Dr, Pelion, SC 29123",
+        "PopPercentDiff": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.15284,
+          34.027945
+        ]
+      },
+      "properties": {
+        "School": "River Bluff High",
+        "Address": "320 Corley Mill Rd, Lexington, SC 29072",
+        "PopPercentDiff": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.2323217,
+          33.9045033
+        ]
+      },
+      "properties": {
+        "School": "White Knoll High",
+        "Address": "5643 Platt Springs Rd, Lexington, SC 29073",
+        "PopPercentDiff": null
+      }
+    }
+  ]
+}
