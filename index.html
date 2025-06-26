@@ -1,81 +1,87 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Interactive School District Map</title>
+    <title>Interactive School District Map (Population Percent Change)</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Load Leaflet from CDN -->
+    <!-- Load Leaflet -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <style>
       #map { height: 95vh; width: 100vw; }
     </style>
 </head>
 <body>
-    <h2>School District and Points Map</h2>
+    <h2>Schools: Population Percent Difference by Location</h2>
     <div id="map"></div>
 
-    <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <!-- fetch polyfill for old browsers -->
     <script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@3.6.2/dist/fetch.umd.min.js"></script>
     <script>
-      // Initialize map
-      var map = L.map('map').setView([34, -81], 9); // Adjust center/zoom for your area
+    // Helper functions for color/size
+    function getColor(diff) {
+        // Adjust thresholds/colors to taste!
+        return diff > 10 ? '#FF4136' :      // big increase: bright red
+               diff > 0  ? '#FFCCCC' :      // low/small positive: light red/pink
+              diff < 0 ? '#0074D9':          // zero or negative: blue
+    }
+    function getRadius(diff) {
+        // Adjust scaling to your data range
+        if (diff > 20) return 20;
+        if (diff > 15) return 16;
+        if (diff > 10) return 13;
+        if (diff > 5)  return 10;
+        if (diff > 0)  return 7;
+        return 5; // negative/very low
+    }
 
-      // Add OpenStreetMap base layer
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-          attribution: '© OpenStreetMap contributors'
-      }).addTo(map);
+    // Setup map
+    var map = L.map('map').setView([34, -81], 9);
 
-      // Load the GeoJSON
-      fetch('District_and_Schools_small.geojson')
-      .then(function(response) { return response.json(); })
-      .then(function(data) {
-          // Display polygons (school districts)
-          var boundaryLayer = L.geoJSON(data, {
-              style: function (feature) {
-                  // Only style polygons (not points)
-                  if(feature.geometry.type === 'Polygon' || feature.geometry.type === 'MultiPolygon') {
-                    return {color: "#0074D9", weight: 2, fillOpacity: 0.1};
-                  }
-              },
-              filter: function(feature){
-                  // Only add polygons to this layer
-                  return feature.geometry.type === 'Polygon' || feature.geometry.type === 'MultiPolygon';
-              }
-          }).addTo(map);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
 
-          // Display points (schools)
-          var pointLayer = L.geoJSON(data, {
-              pointToLayer: function(feature, latlng){
-                  return L.circleMarker(latlng, {
-                    radius: 6,
-                    fillColor: "#FF4136",
-                    color: "#fff",
+    // Load GeoJSON
+    fetch('District_and_Schools_small.geojson')
+    .then(response => response.json())
+    .then(data => {
+        // Draw boundary polygons
+        var boundaryLayer = L.geoJSON(data, {
+            style: feature =>
+              (feature.geometry.type === 'Polygon' || feature.geometry.type === 'MultiPolygon')
+                ? {color: "#0074D9", weight: 2, fillOpacity: 0.1}
+                : undefined,
+            filter: feature => (feature.geometry.type === 'Polygon' || feature.geometry.type === 'MultiPolygon')
+        }).addTo(map);
+
+        // Draw school points
+        var pointsLayer = L.geoJSON(data, {
+            pointToLayer: function(feature, latlng){
+                var diff = feature.properties.PopPercentDiff || 0;
+                return L.circleMarker(latlng, {
+                    radius: getRadius(diff),
+                    fillColor: getColor(diff),
+                    color: "#333",
                     weight: 1,
                     opacity: 1,
                     fillOpacity: 0.8
-                  });
-              },
-              filter: function(feature){
-                  // Only points here
-                  return feature.geometry.type === 'Point';
-              },
-              onEachFeature: function(feature, layer){
-                  var props = feature.properties;
-                  var popupContent = "<b>" + (props.School || "Unknown School") + "</b>";
-                  if(props.Address){
-                      popupContent += "<br><i>" + props.Address + "</i>";
-                  }
-                  layer.bindPopup(popupContent);
-              }
-          }).addTo(map);
-
-          // Optionally fit map to boundary
-          if (boundaryLayer.getBounds().isValid()) {
-            map.fitBounds(boundaryLayer.getBounds(), { maxZoom: 13 });
-          }
-      });
+                });
+            },
+            filter: feature => (feature.geometry.type === 'Point'),
+            onEachFeature: function(feature, layer){
+                var props = feature.properties;
+                var popup = "<b>" + (props.School || "Unknown School") + "</b>" +
+                            "<br><i>" + (props.Address || "") + "</i>";
+                if(props.PopPercentDiff !== undefined){
+                    popup += "<br>Pop % Diff: <b>" + props.PopPercentDiff.toFixed(2) + "%</b>";
+                }
+                layer.bindPopup(popup);
+            }
+        }).addTo(map);
+        if (boundaryLayer.getBounds().isValid()) {
+            map.fitBounds(boundaryLayer.getBounds(), {maxZoom: 13});
+        }
+    });
     </script>
 </body>
 </html>
